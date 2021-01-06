@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="GuiMaps\BoardPage.xml" />
+    <None Remove="GuiMaps\HomePage.xml" />
+    <None Remove="GuiMaps\LoginPage.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="GuiMaps\BoardPage.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GuiMaps\HomePage.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GuiMaps\LoginPage.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="87.0.4280.8800" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonFramework\CommonFramework.csproj" />
+  </ItemGroup>
+
+</Project>

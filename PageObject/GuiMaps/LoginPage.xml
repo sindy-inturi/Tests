@@ -1,0 +1,14 @@
+﻿<ObjectRepository>
+	<Element name='username'>
+		<id>user</id>
+	</Element>
+	<Element name='logInWithAtlassian'>
+		<xpath>//input[@value='Log in with Atlassian']</xpath>
+	</Element>
+	<Element name='password'>
+		<xpath>//input[@type='password']</xpath>
+	</Element>
+	<Element name='login'>
+		<xpath>//button[@type='submit']</xpath>
+	</Element>
+</ObjectRepository>

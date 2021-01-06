@@ -1,0 +1,30 @@
+﻿<ObjectRepository>
+	<Element name='addlist'>
+		<xpath>//span[text()='Add a list']</xpath>
+	</Element>
+	<Element name='listName'>
+		<xpath>//input[@class='list-name-input']</xpath>
+	</Element>
+	<Element name='addbutton'>
+		<xpath>//input[@value='Add List']</xpath>
+	</Element>
+	<Element name='addcard'>
+		<xpath>//span[contains(@class,'add-a-card')]</xpath>
+	</Element>
+	<Element name='entercarddetails'>
+		<xpath>//textarea[contains(@class,'list-card-composer-textarea')]</xpath>
+	</Element>
+	<Element name='addcardbutton'>
+		<xpath>//input[@value='Add Card']</xpath>
+	</Element>
+
+	<Element name='cardname'>
+		<xpath>//span[contains(@class,'js-card-name') and text()='{0}']</xpath>
+	</Element>
+	<Element name='extramenu'>
+		<xpath>//h2[text()='{0}']/following::a[contains(@class,'list-header-extras-menu')]</xpath>
+	</Element>
+	<Element name='archievelist'>
+		<xpath>//a[contains(@class,'js-close-list')]</xpath>
+	</Element>
+</ObjectRepository>

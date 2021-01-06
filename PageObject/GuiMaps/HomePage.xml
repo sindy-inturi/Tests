@@ -1,0 +1,11 @@
+﻿<ObjectRepository>
+	<Element name='submit'>
+		<xpath>//button[@type='submit']</xpath>
+	</Element>
+	<Element name='userprofile'>
+		<xpath>//div[contains(@title,'{0}')]</xpath>
+	</Element>
+	<Element name='board'>
+		<xpath>//div[@title='{0}']/parent::div</xpath>
+	</Element>
+</ObjectRepository>
