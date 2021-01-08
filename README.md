@@ -11,3 +11,5 @@ Total of 3 tests have been automated (Mix of UI and API)
 The 'Common Framework' and 'Page Object' projects are Class Libraries which contain the utilities and other relevant methods.
 
 Common Framework is referenced by SpecflowTests and Page Object
+
+NOTE: In BrowserUtils Class , Please provide the path of your chromeDriver and make sure the driver version is compatible with your browser. 
