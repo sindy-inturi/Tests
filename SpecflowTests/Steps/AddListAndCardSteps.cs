@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PageObject.Pages;
-using System;
 using TechTalk.SpecFlow;
 using Tests;
 

@@ -1,8 +1,9 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using SeleniumExtras.WaitHelpers;
+using OpenQA.Selenium.Support.UI;
 
 namespace CommonFramework
 {
@@ -57,7 +58,8 @@ namespace CommonFramework
             }
             catch (Exception e)
             {
-                throw new Exception("Unable to take screenshot: " + e);
+                Exception exception = new Exception("Unable to take screenshot: " + e);
+                throw exception;
             }
         }
         public static void RefreshBrowser()
@@ -150,7 +152,7 @@ namespace CommonFramework
 
         private static By LocateElement(LocatorType locator, string locatorValue, string elementValue = "")
         {
-            if(!elementValue.Equals(""))
+            if(!string.IsNullOrEmpty(elementValue))
             {
                 locatorValue = String.Format(locatorValue, elementValue);
             }
@@ -206,8 +208,8 @@ namespace CommonFramework
             try
             {
                 WebDriverWait wait = new WebDriverWait(BrowserUtils.Driver, TimeSpan.FromSeconds(60));
-                wait.Until(ExpectedConditions.ElementExists(LocateElement(locator, LocatorValue, elementValue)));
-                wait.Until((ExpectedConditions.ElementToBeClickable(LocateElement(locator, LocatorValue,elementValue))));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(LocateElement(locator, LocatorValue, elementValue)));
+                wait.Until((SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(LocateElement(locator, LocatorValue,elementValue))));
                 return BrowserUtils.Driver.FindElement(LocateElement(locator, LocatorValue,elementValue));
             }
             catch (NoSuchElementException)
@@ -229,7 +231,6 @@ namespace CommonFramework
 
         public static bool IsElementPresent(LocatorType locator, string LocatorValue)
         {
-            //if (GetListOfElementsFromLocator(locator, LocatorValue) != null)
             if (GetListOfElementsFromLocator(locator, LocatorValue).Count > 0)
             {
                 return true;

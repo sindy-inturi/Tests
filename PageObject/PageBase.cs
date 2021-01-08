@@ -6,8 +6,8 @@ namespace PageObject
 {
     public class PageBase
     {
-        private GuiMapParser map = null;
-        private Dictionary<string, GuiMap> dictionary = null;
+        private readonly GuiMapParser map = null;
+        private readonly Dictionary<string, GuiMap> dictionary = null;
 
         public PageBase(string fileName)
         {

@@ -8,9 +8,9 @@ namespace CommonFramework
 {
     public class GuiMapParser
     {
-        private string fullPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\GuiMaps\";
+        private readonly string fullPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\GuiMaps\";
 
-        private string xmlNodePath = "/ObjectRepository/Element";
+        private readonly string xmlNodePath = "/ObjectRepository/Element";
 
         private GuiMap guiMap = null;
 

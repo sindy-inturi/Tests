@@ -1,11 +1,7 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using RestSharp;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CommonFramework.Components;
 using System.Xml.Linq;
 using System.IO;
@@ -16,8 +12,8 @@ namespace CommonFramework.APIEndpoints
    
     public class BoardClient
     {
-         string key;
-         string token;
+        readonly string key;
+        readonly string token;
 
         public BoardClient()
         {

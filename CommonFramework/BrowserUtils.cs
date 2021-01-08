@@ -3,53 +3,16 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
-using System.Configuration;
 
 namespace CommonFramework
 {
     public static class BrowserUtils
     {
-        private static IWebDriver _driver;
+        public static IWebDriver Driver { get; set; }
 
-        public static IWebDriver Driver
-        {
-            get
-            {
-                return _driver;
-            }
-            set
-            {
-                _driver = value;
-            }
-        }
+        public static string BaseUrl { get; set; }
 
-        private static string _baseUrl;
-
-        public static string BaseUrl
-        {
-            get
-            {
-                return _baseUrl;
-            }
-            set
-            {
-                _baseUrl = value;
-            }
-        }
-
-        private static string _browserName;
-
-        public static string BrowserName
-        {
-            get
-            {
-                return _browserName;
-            }
-            set
-            {
-                _browserName = value;
-            }
-        }
+        public static string BrowserName { get; set; }
 
         public static void InitBrowser()
         {
